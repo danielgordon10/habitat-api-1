@@ -9,8 +9,8 @@ from math import pi
 import torch.nn.functional as F
 import orbslam2
 import habitat
-from baselines.slambased.utils import generate_2dgrid
-from baselines.slambased.reprojection import (
+from habitat_baselines.slambased.utils import generate_2dgrid
+from habitat_baselines.slambased.reprojection import (
     homogenize_p,
     get_distance,
     project_tps_into_worldmap,
@@ -19,17 +19,17 @@ from baselines.slambased.reprojection import (
     planned_path2tps,
     angle_to_pi_2_minus_pi_2,
 )
-from baselines.slambased.reprojection import (
+from habitat_baselines.slambased.reprojection import (
     angle_to_pi_2_minus_pi_2 as norm_ang,
 )
 from habitat.sims.habitat_simulator import SimulatorActions
-from baselines.slambased.mappers import DirectDepthMapper
-from baselines.slambased.path_planners import DifferentiableStarPlanner
+from habitat_baselines.slambased.mappers import DirectDepthMapper
+from habitat_baselines.slambased.path_planners import DifferentiableStarPlanner
 
-from baselines.config.default import cfg
+from habitat_baselines.config.default import cfg
 from habitat.config.default import get_config
 
-from baselines.slambased.monodepth import MonoDepthEstimator
+from habitat_baselines.slambased.monodepth import MonoDepthEstimator
 
 # https://sumit-ghosh.com/articles/python-download-progress-bar/
 import sys

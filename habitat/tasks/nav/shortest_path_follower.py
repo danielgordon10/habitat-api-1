@@ -2,15 +2,12 @@ from typing import Union
 
 import habitat_sim
 import numpy as np
-
 from habitat.sims.habitat_simulator import HabitatSim
 from habitat.sims.habitat_simulator import SimulatorActions
 from habitat.utils.geometry_utils import (
     angle_between_quaternions,
     quaternion_from_two_vectors,
-    quaternion_xyzw_to_wxyz,
 )
-
 
 EPSILON = 1e-6
 
